@@ -11,11 +11,10 @@ The data was sourced from Seattle Open Data and processed in Python. The dataset
 
 ## Flourish visualization
 
-- Interactive embedded visualization:
+- Screenshot: 
+![Flourish "Top 15 Seattle Traffic Count Locations by Average Daily Traffic in 2026" Screenshot](images/Siwon_Lee_B_DATA_497_Assignment_Flourish_1.png)
 
-<div class="flourish-embed flourish-chart" data-src="visualisation/28510547"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/28510547/thumbnail" width="100%" alt="visualization" /></noscript></div>
-
-- Link: [Flourish Public Project "Top 15 Seattle Traffic Count Locations by Average Daily Traffic in 2026"](https://public.flourish.studio/visualisation/28510547/)
+- Interactive visualization link: [Flourish Public Project "Top 15 Seattle Traffic Count Locations by Average Daily Traffic in 2026"](https://public.flourish.studio/visualisation/28510547/)
 
 ---
 
