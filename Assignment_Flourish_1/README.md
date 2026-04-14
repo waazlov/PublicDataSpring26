@@ -1,4 +1,4 @@
-# Top Seattle Count Locations by Average Daily Traffic (2026)
+# Top Seattle Traffic Count Locations by Average Daily Traffic (2026)
 
 ## Overview
 This visualization presents the top 15 traffic count locations in Seattle based on Average Daily Traffic (ADT) for the year 2026. ADT represents tbe average number of vehicles passing a given location per day and is commonly used as an indicator of traffic intensity
