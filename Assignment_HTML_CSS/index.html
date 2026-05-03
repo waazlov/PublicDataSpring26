@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Reviewing a Messy Dataset</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">HTML/CSS Public Data Review</p>
+        <h1>Reviewing a Messy Dataset</h1>
+        <h3>Why data cleaning shapes what the public sees</h3>
+        <p class="intro">
+          A polished data visualization can look simple, objective, and complete. But before the public sees a chart, the data has already gone through filtering, cleaning, standardizing, aggregation, and design choices. This page reviews that hidden process using Seattle traffic count data as an example.
+        </p>
+      </header>
+
+      <section class="takeaway">
+        <h4>Main Review Claim</h4>
+        <p>
+          Data cleaning is necessary because raw data is often too messy to communicate clearly. At the same time, cleaning is never neutral. Every processing decision affects what becomes visible, what gets removed, and what the final visualization seems to prove.
+        </p>
+      </section>
+
+      <!-- This section shows the transformation from raw data to public visualization. -->
+      <section class="image-section">
+        <h4>1. The raw dataset looks complete, but it is difficult to read</h4>
+        <p>
+          The raw traffic count data contains many columns, technical field names, date fields, street variables, and traffic measurements. This kind of data is useful, but it is not immediately public facing. A viewer would need time, context, and technical knowledge to understand which variables matter.
+        </p>
+
+        <figure>
+          <img src="images/data_raw_image.png" alt="Screenshot of raw Seattle traffic count data in a spreadsheet">
+          <figcaption>
+            Raw traffic count data before cleaning. The amount of detail is useful, but it can also make interpretation difficult.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h4>2. Cleaning turns messy data into a readable structure</h4>
+        <p>
+          In my traffic count project, the dataset was filtered to include only 2026 records. I selected the fields needed for the analysis, cleaned and standardized location names, created a unified location field, and aggregated traffic volume by location using average daily traffic.
+        </p>
+        <p>
+          This made the data easier to visualize. However, it also narrowed the dataset. The final table no longer shows every original field, every record, or every possible interpretation. It shows the version of the data that was prepared for one specific analytical purpose.
+        </p>
+
+        <figure>
+          <img src="images/data_processed_image.png" alt="Screenshot of processed traffic count data with location and average daily traffic columns">
+          <figcaption>
+            Processed data after filtering, cleaning, and aggregation. The table is clearer, but many original details have been removed.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="method-box">
+        <h4>Method: How the traffic data was processed</h4>
+        <p>
+          The raw Traffic Study Flow Counts dataset was processed in Python using pandas and NumPy. I first loaded the full CSV file, checked the dataset shape and column names, and filtered the records to include only rows where the study year was 2026.
+        </p>
+        <p>
+          After filtering, I kept only the columns needed for the visualization: origin street, cross street, and average daily traffic. I cleaned the street fields by converting them to text, removing extra whitespace, and replacing fake “nan” text values with real missing values. I also converted the traffic count field into numeric form so it could be aggregated correctly.
+        </p>
+        <p>
+          To create readable location labels, I combined the origin street and cross street into one location field. Then I grouped the data by location, calculated the mean average daily traffic for repeated locations, sorted the results from highest to lowest traffic, rounded the values, and selected the top fifteen locations for the final Flourish visualization.
+        </p>
+      </section>
+
+      <section class="critical-box">
+        <h4>What gets hidden during processing?</h4>
+        <p>
+          The cleaned table is easier to understand, but it hides several important details: records outside 2026, unused columns, differences between individual studies, variation within the same location, and the fact that the final view only includes the top fifteen locations. This is why data processing should be documented clearly.
+        </p>
+      </section>
+
+      <section>
+        <h4>3. The final visualization looks certain because the messiness is gone</h4>
+        <p>
+          The final visualization presents the top Seattle traffic count locations by average daily traffic. It is much easier for the public to read than the raw spreadsheet. The labels, sorting, and bars guide attention immediately.
+        </p>
+        <p>
+          But the chart should not be read as the full reality of Seattle traffic. A more accurate interpretation is that it shows the highest average daily traffic locations within a filtered and processed version of the 2026 traffic count data.
+        </p>
+
+        <figure>
+          <img src="images/Top 15 Seattle Traffic Count Locations by Average Daily Traffic in 2026.png" alt="Final bar chart of top Seattle traffic count locations by average daily traffic in 2026">
+          <figcaption>
+            Final visualization after cleaning and aggregation. The chart is clear because many earlier data decisions have already been made.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h4>Why this matters for public data</h4>
+        <p>
+          Public data is often treated as transparent simply because it is available online. But access does not automatically create understanding. If the public only sees the final chart, they may miss the cleaning and processing choices that shaped the result.
+        </p>
+        <p>
+          This is why good visualization should communicate both the conclusion and the method. Clean visuals are valuable, but they should not hide the path from raw data to public meaning.
+        </p>
+      </section>
+
+      <section class="rating">
+        <h4>Review Score: 4 out of 5</h4>
+        <p>
+          Data cleaning makes public data usable and visually understandable. Its main weakness is that it can make processed information look more complete than it really is. The best solution is not to avoid cleaning, but to explain it clearly.
+        </p>
+      </section>
+
+      <footer>
+        <p>
+          Data source:
+          <a href="https://data.seattle.gov/dataset/Traffic-Study-Flow-Counts/mqiy-mya8/about_data" target="_blank" rel="noopener noreferrer">
+            City of Seattle Open Data, Traffic Study Flow Counts
+          </a>
+        </p>
+        <p>
+          Images: Screenshots from Siwon Lee's traffic count data processing and Flourish visualization project.
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
