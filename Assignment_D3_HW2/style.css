@@ -1,0 +1,39 @@
+body {
+    font-family: "Source Sans 3", sans-serif;
+    margin: 30px;
+}
+
+svg {
+    display: block;
+}
+
+.temperature-line {
+    fill: none;
+    stroke-width: 2.5;
+}
+
+.axis path,
+.axis line {
+    stroke: #333;
+}
+
+.axis text {
+    font-size: 13px;
+}
+
+.chart-title {
+    font-size: 20px;
+    font-weight: 700;
+    fill: #222;
+}
+
+.axis-label {
+    font-size: 15px;
+    font-weight: 600;
+    fill: #222;
+}
+
+.line-label {
+    font-size: 13px;
+    font-weight: 600;
+}
