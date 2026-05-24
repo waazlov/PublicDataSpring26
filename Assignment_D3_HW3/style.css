@@ -1,0 +1,74 @@
+body {
+    font-family: "Source Sans 3", sans-serif;
+    margin: 30px;
+    color: #222;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.description {
+    width: 780px;
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 18px;
+}
+
+#controls {
+    margin-bottom: 8px;
+}
+
+label {
+    display: inline-block;
+    margin-right: 18px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input {
+    margin-right: 5px;
+}
+
+#selectedMeasure {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+svg {
+    display: block;
+}
+
+.temperature-line {
+    fill: none;
+    stroke-width: 3px;
+}
+
+.axis path,
+.axis line {
+    stroke: #333;
+}
+
+.axis text {
+    font-size: 11px;
+    fill: #222;
+}
+
+.chart-title {
+    font-size: 20px;
+    font-weight: 700;
+    fill: #222;
+}
+
+.axis-label {
+    font-size: 14px;
+    font-weight: 700;
+    fill: #222;
+}
+
+.line-label {
+    font-size: 14px;
+    font-weight: 700;
+}

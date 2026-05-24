@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Interactive Lyneham Temperature Chart</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+3">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+        <h1>Annual Temperature Trends in Lyneham, UK</h1>
+
+        <p class="description">
+            Use the buttons below to switch between average temperature, average maximum temperature,
+            and average minimum temperature. The line updates with a transition so the viewer can compare
+            how each temperature measure changes over time.
+        </p>
+
+        <div id="controls">
+            <label>
+                <input type="radio" name="measure" value="tavg" checked oninput="showSelectedMeasure(this.value)">
+                Average Temperature
+            </label>
+
+            <label>
+                <input type="radio" name="measure" value="tmax" oninput="showSelectedMeasure(this.value)">
+                Average Maximum Temperature
+            </label>
+
+            <label>
+                <input type="radio" name="measure" value="tmin" oninput="showSelectedMeasure(this.value)">
+                Average Minimum Temperature
+            </label>
+        </div>
+
+        <p id="selectedMeasure">Currently showing: Avg Temp</p>
+
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="./main.js"></script>
+    </body>
+</html>
